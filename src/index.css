@@ -22,6 +22,7 @@ body{
     font-weight:300;
     background-color: var(--color-dark-blue);
     color:var(--color-white);
+    min-height:100vh;
 }
 
 .mainInput{
@@ -43,4 +44,16 @@ body{
 
 .btn:hover{
     background-color: #d15151;
+}
+
+.iconSvg{
+    width:20px;
+    height:20px;
+}
+
+@media screen and (max-width:640px){
+    .iconSvg{
+        width:16px;
+        height:auto;
+    }
 }
