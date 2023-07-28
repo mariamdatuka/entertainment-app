@@ -1,8 +1,7 @@
 import { createBrowserRouter,RouterProvider } from "react-router-dom"
 import LogIn from "./pages/LogIn"
 import SignUp from "./pages/SignUp"
-import UserHomePage from "./pages/UserHomepage"
-
+import UserHomePage from  './pages/UserHomePage'
 
 const router=createBrowserRouter([
     {

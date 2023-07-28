@@ -57,3 +57,17 @@ body{
         height:auto;
     }
 }
+
+.search-icon {
+    background-image: url('./assets/icon-search.svg'); 
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 2rem;
+    background-position: left;
+  }
+
+.card-img{
+    background-image: url('./assets/thumbnails/the-diary/regular/small.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;  
+}
