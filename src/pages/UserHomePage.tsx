@@ -11,7 +11,13 @@ const UserHomePage = () => {
             type='text' placeholder='Search for movies or TV series'/>
         </form>
         <h3 className='text-xl py-2'>Trending</h3>
-        <Card/>
+        <section className='overflow-x-auto flex space-x-4'>
+             <Card/>
+             <Card/>
+             <Card/>
+             <Card/>
+        </section>
+      
      </Layout>
    </>
    
