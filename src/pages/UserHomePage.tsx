@@ -1,24 +1,14 @@
-import {useState,useEffect} from 'react'
+
 import Layout from "../components/Layout";
 import Card from "../components/Card";
-import axios from 'axios'
+
 
 const UserHomePage = () => {
-  const [items,setItems]=useState<any>([])
+
   const url= 'https://entertainment-web.onrender.com/api/film'
    
-  const fetchAllItems=async()=>{
-    try {
-      const response=await axios.get(url);
-      setItems(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
-  useEffect(()=>{
-     fetchAllItems();
-  },[])
+
   return (
    
    <>
@@ -36,13 +26,7 @@ const UserHomePage = () => {
         </section>
        <h3 className='text-xl py-2'>Recommended for you</h3>
        <section className='grid grid-cols-2'>
-            {
-              items.map((itm:any)=>(
-                 <div key={itm.id}>
-                     {itm.title}
-                 </div>
-              ))
-            }
+           
        </section>
      </Layout>
    </>
