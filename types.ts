@@ -1,5 +1,5 @@
 export interface Data{
-    id:string;
+    _id:string;
     title:string;
     regularSmall: string;
     regularMedium: string;
@@ -9,4 +9,4 @@ export interface Data{
     rating: string;
     isBookmarked: boolean;
     isTrending: boolean;
-}[]
+}
