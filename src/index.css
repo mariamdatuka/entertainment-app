@@ -76,3 +76,20 @@ body{
     align-items:flex-end;
     gap:20px;
 }
+
+.upload {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 0;
+    background-color: #f0f0f0;
+    color: #444;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload:hover {
+    background-color: #ddd;
+  }

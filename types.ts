@@ -10,3 +10,9 @@ export interface Data{
     isBookmarked: boolean;
     isTrending: boolean;
 }
+
+export interface userData{
+    avatar:any;
+    email:string;
+    password:string;
+}
