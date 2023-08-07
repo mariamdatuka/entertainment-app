@@ -16,3 +16,8 @@ export interface userData{
     email:string;
     password:string;
 }
+
+export interface LogUser{
+    email:string;
+    password:string;
+}
