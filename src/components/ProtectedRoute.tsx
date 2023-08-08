@@ -1,11 +1,13 @@
-import React from 'react'
-import { Route, redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
 
-const ProtectedRoute = () => {
-  return (
-    <div>ProtectedRoute</div>
-  )
+const ProtectedRoute = ({element, isAuth,...rest}) => {
+  return  isAuth ? (
+      <Route {...rest} element={element}/>
+  ):
+    (
+      <Navigate to="/login" replace />
+    );
 }
 
 export default ProtectedRoute
