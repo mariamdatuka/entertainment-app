@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface Data{
     _id:string;
     title:string;
@@ -21,3 +23,8 @@ export interface LogUser{
     email:string;
     password:string;
 }
+
+export interface ProtectedRouteProps {
+    element: ReactNode;
+    isAuth: boolean;
+  }

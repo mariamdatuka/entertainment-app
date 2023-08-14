@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'; 
 import { Link } from 'react-router-dom'
 import icon from '../assets/movie.svg'
 import { useForm} from "react-hook-form"
@@ -6,8 +7,12 @@ import * as yup from "yup"
 import axios from 'axios'
 import { LogUser } from '../../types'
 
-const LogIn = () => {
+interface LogInProps {
+  setIsAuth: (value: boolean) => void;
+}
 
+const LogIn = ({setIsAuth}:LogInProps) => {
+  const navigate=useNavigate();
   const schema= yup.object().shape({
     email:yup.string().required('required'),
     password:yup.string().required('required'),
@@ -24,11 +29,13 @@ const LogIn = () => {
   const onSubmit = async (data:LogUser) =>{
   try {
     const response = await axios.post('https://entertainment-web.onrender.com/api/user/login', data);
-    console.log(response.status);
+    setIsAuth(true);
+    navigate('/userprofile')
   } catch (error) {
     console.log(error);
   }
 }
+
 
   return (
     <>

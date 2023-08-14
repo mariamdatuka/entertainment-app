@@ -1,12 +1,15 @@
-import { Route, Navigate } from 'react-router-dom';
+import { Route, Navigate, Routes } from 'react-router-dom';
+import { ProtectedRouteProps } from '../../types';
 
 
-const ProtectedRoute = ({element, isAuth,...rest}) => {
+const ProtectedRoute:React.FC<ProtectedRouteProps>= ({element, isAuth,...rest}) => {
   return  isAuth ? (
-      <Route {...rest} element={element}/>
+    <Routes>
+        <Route {...rest} element={element}/>
+    </Routes>
   ):
     (
-      <Navigate to="/login" replace />
+      <Navigate to="/" replace />
     );
 }
 

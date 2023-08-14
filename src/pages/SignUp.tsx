@@ -32,7 +32,7 @@ const onSubmit = async (data:userData) =>{
     formData.append('password', data.password);
   try {
     const response = await axios.post('https://entertainment-web.onrender.com/api/user/signup', formData);
-    console.log(response.data);
+    console.log(response.status);
   } catch (error) {
     console.log(error);
   }

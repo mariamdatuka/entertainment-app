@@ -11,20 +11,19 @@ function App() {
   const router=createBrowserRouter([
     {
       path:'/',
-      element:<LogIn/>
+      element:<LogIn setIsAuth={setIsAuth}/>
     },
-    {
+    { 
       path:'/signup',
       element:<SignUp/>
     },
     {
-      path:'/userprofile',
-      element:(
+      path:'/userprofile/*',
+      element:
         <ProtectedRoute
         element={<UserHomePage />}
         isAuth={isAuth}
       />
-      )
     },
 ])
 
