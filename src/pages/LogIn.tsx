@@ -7,12 +7,12 @@ import * as yup from "yup"
 import axios from 'axios'
 import { LogUser } from '../../types'
 
-interface LogInProps {
-  setIsAuth: (value: boolean) => void;
+interface LoginProps{
+  setIsAuth:(value:boolean)=>void;
 }
-
-const LogIn = ({setIsAuth}:LogInProps) => {
+const LogIn = ({setIsAuth}:LoginProps) => {
   const navigate=useNavigate();
+
   const schema= yup.object().shape({
     email:yup.string().required('required'),
     password:yup.string().required('required'),
@@ -29,6 +29,7 @@ const LogIn = ({setIsAuth}:LogInProps) => {
   const onSubmit = async (data:LogUser) =>{
   try {
     const response = await axios.post('https://entertainment-web.onrender.com/api/user/login', data);
+    console.log(response.status)
     setIsAuth(true);
     navigate('/userprofile')
   } catch (error) {

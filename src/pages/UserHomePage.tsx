@@ -6,8 +6,8 @@ import { fetchDataAsync } from '../redux/slices/ItemsSlice';
 import { Data } from '../../types';
 
 
-const UserHomePage = () => {
 
+const UserHomePage = () => {
  const dispatch=useAppDispatch();
  const items=useAppSelector((state)=>state.items.items)
  const trending=items.filter((itm)=>itm.isTrending===true);
