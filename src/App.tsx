@@ -4,6 +4,7 @@ import LogIn from "./pages/LogIn"
 import SignUp from "./pages/SignUp"
 import UserHomePage from  './pages/UserHomePage'
 import Movies from "./pages/Movies"
+import Series from './pages/Series';
 
 
 function App() {
@@ -24,10 +25,9 @@ function App() {
               <Navigate to='/'/>
             )
          }
-         >
+         />
            <Route path='movies' element={<Movies/>}/>
-         </Route>
-         
+           <Route path='series' element={<Series/>}/>
       </Routes>
     </>
   )
