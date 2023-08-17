@@ -93,3 +93,11 @@ body{
   .upload:hover {
     background-color: #ddd;
   }
+
+  .bookmark{
+    cursor:pointer;
+  }
+
+  .bookmark:hover{
+    fill:#ffffff;
+  }

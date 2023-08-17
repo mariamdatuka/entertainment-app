@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp"
 import UserHomePage from  './pages/UserHomePage'
 import Movies from "./pages/Movies"
 import Series from './pages/Series';
+import Bookmarks from './pages/Bookmarks';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
          />
            <Route path='movies' element={<Movies/>}/>
            <Route path='series' element={<Series/>}/>
+           <Route path='bookmarks' element={<Bookmarks/>}/>
       </Routes>
     </>
   )

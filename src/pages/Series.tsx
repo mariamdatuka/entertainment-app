@@ -16,7 +16,8 @@ const Series = () => {
 
     const series=items.filter((itm)=>{
       const allSeries=itm.category==='TV Series';
-      const matchedSeries=searchItem.trim()===''||
+      const matchedSeries=searchItem.trim()===''||itm.title.toLowerCase().includes(searchItem.toLowerCase())
+      return allSeries && matchedSeries
     })
    
     useEffect(()=>{
