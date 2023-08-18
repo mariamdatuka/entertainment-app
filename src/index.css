@@ -49,6 +49,11 @@ body{
 .iconSvg{
     width:20px;
     height:20px;
+   
+}
+
+a svg path.active{
+  fill:#ffffff;
 }
 
 @media screen and (max-width:640px){

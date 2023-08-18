@@ -2,10 +2,12 @@ import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
 import type { TypedUseSelectorHook } from 'react-redux'
 import itemsReducer from '../slices/ItemsSlice'
+import userProfileReducer from '../slices/UserProfileSlice'
 
 export const store=configureStore({
     reducer:{
-        items:itemsReducer
+        items:itemsReducer,
+        userProfile:userProfileReducer
     }
 })
 

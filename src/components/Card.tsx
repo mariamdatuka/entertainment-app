@@ -10,6 +10,7 @@ const Card = ({itm}:any) => {
       imageUrl = itm.regularLarge; 
     }
   }
+  
   return (
     <>
     <div className='flex flex-col gap-2'>

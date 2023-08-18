@@ -6,12 +6,17 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import axios from 'axios'
 import { LogUser } from '../../types'
+import {useAppDispatch} from '../redux/store/store';
+import { setUserProfile } from '../redux/slices/UserProfileSlice';
+
 
 interface LoginProps{
   setIsAuth:(value:boolean)=>void;
 }
+
 const LogIn = ({setIsAuth}:LoginProps) => {
   const navigate=useNavigate();
+  const dispatch=useAppDispatch();
 
   const schema= yup.object().shape({
     email:yup.string().required('required'),
@@ -29,7 +34,7 @@ const LogIn = ({setIsAuth}:LoginProps) => {
   const onSubmit = async (data:LogUser) =>{
   try {
     const response = await axios.post('https://entertainment-web.onrender.com/api/user/login', data);
-    console.log(response.status)
+    dispatch(setUserProfile(response.data.avatar));
     setIsAuth(true);
     navigate('/userprofile')
   } catch (error) {
