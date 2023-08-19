@@ -21,7 +21,7 @@ const Bookmarks = () => {
 
   useEffect(()=>{
    dispatch(fetchDataAsync())
-  },[])
+  },[bookmarkedItems])
 
   return (
     <>

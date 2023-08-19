@@ -5,7 +5,7 @@ import { useAppSelector } from '../redux/store/store'
 const Header = () => {
   const location=useLocation();
   const userProfile=useAppSelector((state)=>state.userProfile);
-  console.log(userProfile);
+ 
 
 
   const isLinkActive=(link:string)=>{

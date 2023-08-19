@@ -103,6 +103,6 @@ a svg path.active{
     cursor:pointer;
   }
 
-  .bookmark:hover{
-    fill:#ffffff;
+  .bookmarked{
+    fill:#fff;
   }
